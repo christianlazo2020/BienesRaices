@@ -1,0 +1,397 @@
+/*Globales*/
+*,
+*:before,
+*after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.8;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 2.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*utilidades*/
+.fw-300 {
+  font-weight: 300;
+}
+.seccion {
+  margin: 2rem 0;
+}
+.text-center {
+  text-align: center;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.contenido-centrado {
+  max-width: 80rem;
+}
+
+.barra {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+/*Botones*/
+.boton {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0.2rem;
+  border-color: transparent;
+  transition: 1s;
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: black;
+  transition: 1s;
+}
+.verde {
+  background-color: #71b100;
+}
+.amarillo {
+  background-color: #e08709;
+}
+/*Header*/
+.site-header {
+  background-color: #333333;
+  padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 60rem;
+}
+
+.contenido-header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenido-header h1 {
+  color: #ffffff;
+  padding-bottom: 2rem;
+  max-width: 60rem;
+}
+
+.iconos-nosotros {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icono {
+  flex-basis: calc(100% / 3 - 1rem);
+  text-align: center;
+}
+
+/*navegacion*/
+.navegacion a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+.navegacion a:hover {
+  color: #71b100;
+}
+.navegacion a:last-of-type {
+  margin: 0px;
+}
+
+/*Anuncios*/
+
+.contenedor-anuncios {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anuncio {
+  /* flex-grow: 1; /*esta propiedad permite que si hay espacio disponible este sea tomado por el elemento que tiene esta propiedad
+  flex-shrink: 0; /*con esta propiedad lo que hacemos es decirle al flex que si si el navegador se encoja las imagenes no lo hagan
+  flex-basis: calc(100% / 3 - 1rem); */
+  /*version corta*/
+  flex: 0 0 calc(100% / 3 - 1rem);
+  border: 0.1rem solid #b5b5b5;
+  background-color: #f5f5f5;
+  margin-bottom: 2rem;
+}
+
+.contenido-anuncio {
+  padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+
+.precio {
+  color: #71b100;
+  font-weight: 700;
+}
+
+.iconos-caracteristicas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  max-width: 50rem;
+}
+
+.iconos-caracteristicas li {
+  /* flex: 1; */
+  display: flex;
+}
+
+.iconos-caracteristicas li img {
+  margin-right: 2rem;
+}
+
+.ver-todas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Contacto Home*/
+.imagen-contacto {
+  background-image: url(../img/encuentra.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+
+.contenido-contacto {
+  flex: 1;
+  color: #ffffff;
+}
+
+.contenido-contacto p {
+  font-size: 1.8rem;
+}
+
+/*Seccion Inferior*/
+.seccion-inferior {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog {
+  flex-basis: 60%;
+}
+
+.testimoniales {
+  flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.entrada-blog :last-of-type {
+  margin-bottom: 0;
+}
+
+.imagen {
+  flex-basis: 40%;
+}
+
+.texto-entrada {
+  flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+  text-decoration: none;
+  color: black;
+}
+
+.texto-entrada h4 {
+  margin: 0;
+  line-height: 2;
+}
+/*pseudoelementos estos se llaman asi porque estos no se pueden selleccionar, estos pseudoelementos hay que darles siempre una medida o no se veran*/
+.texto-entrada h4::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 0.5rem;
+  background-color: #71b100;
+  margin-top: 1rem;
+}
+
+span {
+  color: #e08709;
+}
+
+/*Testimoniales*/
+
+.testimonial {
+  background-color: #71b100;
+  font-size: 2.4rem;
+  padding: 2rem;
+  color: #ffffff;
+  border-radius: 2rem;
+}
+
+.testimonial p {
+  text-align: right;
+}
+
+.testimonial blockquote::before {
+  content: "";
+  background-image: url("../img/comilla.svg");
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: -2rem;
+}
+
+.testimonial blockquote {
+  position: relative;
+  padding-left: 4rem;
+  font-weight: 300;
+}
+
+/*Footer*/
+.site-footer {
+  background-color: #333333;
+  margin-bottom: 0;
+}
+.copyrigh {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.contenedor-footer {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/********************************************* Estilos de Nosotros*********************************************************/
+
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* grid-template-columns: 50% 50%;  o tambien se puedo : 1fr, 1fr */
+  grid-column-gap: 2rem;
+  line-height: 2;
+}
+
+.texto-nosotros blockquote {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+  padding: 3rem 0;
+}
+
+/********************************************* Estilos de Anuncio*********************************************************/
+
+.resumen-propiedad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/********************************************* Estilos de Contacto*********************************************************/
+
+form p {
+  font-size: 1.4rem;
+  color: #333333;
+  margin: 2rem 0 0 0;
+}
+
+legend {
+  font-size: 2rem;
+  color: #333333;
+}
+
+label {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+  padding: 1rem;
+  display: block;
+  width: 95%;
+  margin-bottom: 1rem;
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 1rem;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-bottom: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  height: 20rem;
+}
+
+.forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
